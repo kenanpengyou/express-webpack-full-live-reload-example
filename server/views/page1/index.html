@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>tea gallery - page1</title>
+    <title>example - page1</title>
     <% if (env === "production") { %>
         <link rel="stylesheet" href="/page1/index.css">
     <% } %>
@@ -14,7 +14,7 @@
         <div id="draw" class="image-example-page1"></div>
     </div>
     <script src="/page1/bundle.js"></script>
-    <% if (env !== "production") { %>
+    <% if (env !== "production" && reload === true) { %>
         <script src="/reload/reload.js"></script>
     <% } %>
 </body>

@@ -12,6 +12,7 @@ app.set('views', path.resolve('./server/views'));
 
 // local variables for all views
 app.locals.env = process.env.NODE_ENV || 'dev';
+app.locals.reload = true;
 
 if (isDev) {
 

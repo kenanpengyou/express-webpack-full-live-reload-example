@@ -2,6 +2,7 @@
   "name": "express-webpack-full-live-reload-example",
   "version": "1.0.0",
   "description": "a workflow with full live reload for webpack&express application",
+  "author": "liangzhu",
   "main": "app.js",
   "scripts": {
     "start": "cross-env NODE_ENV=dev supervisor -i client app",

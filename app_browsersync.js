@@ -11,6 +11,7 @@ app.set('view engine', 'html');
 app.set('views', path.resolve('./server/views'));
 
 app.locals.env = process.env.NODE_ENV || 'dev';
+app.locals.reload = false;
 
 if (isDev) {
     var webpack = require('webpack'),
@@ -32,7 +33,7 @@ if (isDev) {
     require('./server/routes')(app);
 
     // browsersync is a nice choice when modifying only views (with their css & js)
-    var bs = require("browser-sync").create();
+    var bs = require('browser-sync').create();
     app.listen(port, function(){
         bs.init({
             open: false,
