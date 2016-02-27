@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tea gallery - page2</title>
+    <% if (env === "production") { %>
+        <link rel="stylesheet" href="/page2/index.css">
+    <% } %>
+</head>
+<body>
+    <div class="total-container">
+        <div class="first-note">This is page2.</div>
+        <br>
+        <div class="image-example-common"></div>
+    </div>
+    <script src="/page2/bundle.js"></script>
+    <% if (env !== "production") { %>
+        <script src="/reload/reload.js"></script>
+    <% } %>
+</body>
+</html>

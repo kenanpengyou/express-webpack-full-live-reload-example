@@ -1,0 +1,35 @@
+{
+  "name": "express-webpack-full-live-reload-example",
+  "version": "1.0.0",
+  "description": "a workflow with full live reload for webpack&express application",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev supervisor -i client app",
+    "browsersync": "cross-env NODE_ENV=dev node app_browsersync",
+    "build": "webpack",
+    "production": "webpack --config webpack.production.config.js -p & cross-env NODE_ENV=production node app"
+  },
+  "dependencies": {
+    "consolidate": "^0.14.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "chokidar": "^1.4.2",
+    "cross-env": "^1.0.7",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "npm-install-webpack-plugin": "^2.0.2",
+    "reload": "^0.7.0",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.12",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.7.1"
+  }
+}
