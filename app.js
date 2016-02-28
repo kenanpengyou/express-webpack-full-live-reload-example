@@ -18,14 +18,14 @@ if (isDev) {
 
     // static assets served by webpack-dev-middleware & webpack-hot-middleware for development
     var webpack = require('webpack'),
-        webpackMiddleware = require('webpack-dev-middleware'),
+        webpackDevMiddleware = require('webpack-dev-middleware'),
         webpackHotMiddleware = require('webpack-hot-middleware'),
         webpackDevConfig = require('./webpack.config.js');
 
     var compiler = webpack(webpackDevConfig);
 
     // attach to the compiler & the server
-    app.use(webpackMiddleware(compiler, {
+    app.use(webpackDevMiddleware(compiler, {
 
         // public path should be the same with webpack config
         publicPath: webpackDevConfig.output.publicPath,

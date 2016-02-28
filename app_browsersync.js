@@ -15,13 +15,13 @@ app.locals.reload = false;
 
 if (isDev) {
     var webpack = require('webpack'),
-        webpackMiddleware = require('webpack-dev-middleware'),
+        webpackDevMiddleware = require('webpack-dev-middleware'),
         webpackHotMiddleware = require('webpack-hot-middleware'),
         webpackDevConfig = require('./webpack.config.js');
 
     var compiler = webpack(webpackDevConfig);
 
-    app.use(webpackMiddleware(compiler, {
+    app.use(webpackDevMiddleware(compiler, {
         publicPath: webpackDevConfig.output.publicPath,
         noInfo: true,
         stats: {
