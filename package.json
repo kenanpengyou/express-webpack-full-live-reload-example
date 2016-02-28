@@ -1,7 +1,7 @@
 {
   "name": "express-webpack-full-live-reload-example",
   "version": "1.0.0",
-  "description": "a workflow with full live reload for webpack&express application",
+  "description": "A workflow with full live reload for webpack&express application.",
   "author": "liangzhu",
   "main": "app.js",
   "scripts": {
