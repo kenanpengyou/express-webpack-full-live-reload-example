@@ -16,7 +16,7 @@ A workflow with full live reload for webpack&express application.
     * `npm run browsersync` is a alternative for development. It may be faster when modifying the express views
     (templates) only.
     * `npm run production` to emit outputs and run the express for production.
-    * `npm build` if you care about what is hold in memory for development...
+    * `npm run build` if you care about what is hold in memory for development...
 
 ## Preview
 
