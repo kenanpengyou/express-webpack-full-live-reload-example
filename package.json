@@ -2,6 +2,10 @@
   "name": "express-webpack-full-live-reload-example",
   "version": "1.0.0",
   "description": "A workflow with full live reload for webpack&express application.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenanpengyou/express-webpack-full-live-reload-example.git"
+  },
   "author": "liangzhu",
   "main": "app.js",
   "scripts": {
@@ -10,6 +14,7 @@
     "build": "webpack",
     "production": "webpack --config webpack.production.config.js -p & cross-env NODE_ENV=production node app"
   },
+  "license": "MIT",
   "dependencies": {
     "consolidate": "^0.14.0",
     "ejs": "^2.4.1",
