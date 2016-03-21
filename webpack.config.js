@@ -14,7 +14,7 @@ var devConfig = {
         path: path.resolve('./public'),
         publicPath: publicPath
     },
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     module: {
         loaders: [{
             test: /\.(png|jpg)$/,
