@@ -21,9 +21,9 @@
     "express": "^4.13.4"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "chokidar": "^1.4.2",
-    "cross-env": "^1.0.7",
+    "browser-sync": "^2.12.10",
+    "chokidar": "^1.5.1",
+    "cross-env": "^1.0.8",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
@@ -34,7 +34,7 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.12",
+    "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.7.1"
   }
