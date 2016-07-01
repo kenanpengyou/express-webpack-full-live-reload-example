@@ -20,4 +20,4 @@ A workflow with full live reload for webpack&express application.
 
 ## Preview
 
-![example preview](http://kenanpengyou.github.io/assets/used-images/projects/express-webpack-full-live-reload-example/preview.gif)
+![example preview](https://raw.githubusercontent.com/kenanpengyou/kenanpengyou.github.io/master/assets/used-images/projects/express-webpack-full-live-reload-example/preview.gif)
