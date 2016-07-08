@@ -11,7 +11,7 @@ var devConfig = {
     },
     output: {
         filename: './[name]/bundle.js',
-        path: path.resolve('./public'),
+        path: path.resolve(__dirname, './public'),
         publicPath: publicPath
     },
     devtool: 'eval-source-map',

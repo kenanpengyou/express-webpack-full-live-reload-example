@@ -8,7 +8,7 @@ var productionConfig = [{
     },
     output: {
         filename: './[name]/bundle.js',
-        path: path.resolve('./public'),
+        path: path.resolve(__dirname, './public'),
         publicPath: '/'
     },
     module: {

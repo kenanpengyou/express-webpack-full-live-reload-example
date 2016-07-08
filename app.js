@@ -8,7 +8,7 @@ var port = 3000;
 
 app.engine('html', consolidate.ejs);
 app.set('view engine', 'html');
-app.set('views', path.resolve('./server/views'));
+app.set('views', path.resolve(__dirname, './server/views'));
 
 // local variables for all views
 app.locals.env = process.env.NODE_ENV || 'dev';

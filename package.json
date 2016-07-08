@@ -21,7 +21,7 @@
     "express": "^4.13.4"
   },
   "devDependencies": {
-    "browser-sync": "^2.12.10",
+    "browser-sync": "^2.13.0",
     "chokidar": "^1.5.1",
     "cross-env": "^1.0.8",
     "css-loader": "^0.23.1",
