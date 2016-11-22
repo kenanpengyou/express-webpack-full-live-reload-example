@@ -1,6 +1,8 @@
 # express-webpack-full-live-reload-example
 A workflow with full live reload for webpack&express application.
 
+The explaining post could be found [here](http://acgtofe.com/posts/2016/02/full-live-reload-for-express-with-webpack).
+
 ## Start
 
 1. Clone this repo.
