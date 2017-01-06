@@ -17,26 +17,26 @@
   "license": "MIT",
   "dependencies": {
     "consolidate": "^0.14.5",
-    "ejs": "^2.5.2",
+    "ejs": "^2.5.5",
     "express": "^4.14.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.2",
+    "browser-sync": "^2.18.5",
     "chokidar": "^1.6.1",
     "clean-webpack-plugin": "^0.1.14",
     "cross-env": "^1.0.8",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
-    "node-sass": "^3.13.0",
+    "node-sass": "^3.13.1",
     "npm-install-webpack-plugin": "^2.0.2",
     "reload": "^0.7.0",
-    "resolve-url-loader": "^1.6.0",
+    "resolve-url-loader": "^1.6.1",
     "sass-loader": "^3.2.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.3",
-    "webpack-dev-middleware": "^1.8.4",
-    "webpack-hot-middleware": "^2.13.2"
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
   }
 }
