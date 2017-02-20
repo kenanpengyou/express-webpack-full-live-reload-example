@@ -9,7 +9,7 @@
   "author": "liangzhu",
   "main": "app.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=dev supervisor -w server,app.js app",
+    "start": "cross-env NODE_ENV=dev supervisor -w server,app.js -e node,js,html app",
     "browsersync": "cross-env NODE_ENV=dev node app_browsersync",
     "build": "webpack",
     "production": "webpack --config webpack.production.config.js -p & cross-env NODE_ENV=production node app"
