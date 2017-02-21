@@ -13,17 +13,21 @@ var productionConfig = [{
         publicPath: '/'
     },
     module: {
-        loaders: [, {
+        rules: [{
             test: /\.(png|jpg)$/,
-            loader: 'url?limit=8192&context=client&name=[path][name].[ext]'
+            use: 'url-loader?limit=8192&context=client&name=[path][name].[ext]'
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css!resolve-url!sass?sourceMap')
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+            })
         }]
     },
     plugins: [
         new CleanWebpackPlugin(['public']),
-        new ExtractTextPlugin('./[name]/index.css', {
+        new ExtractTextPlugin({
+            filename: './[name]/index.css',
             allChunks: true
         })
     ]
