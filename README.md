@@ -3,6 +3,8 @@ A workflow with full live reload for webpack&express application.
 
 The explaining post could be found [here](http://acgtofe.com/posts/2016/02/full-live-reload-for-express-with-webpack).
 
+This branch `master` is for webpack 2, use branch `webpack_1` if you need the older version.
+
 ## Start
 
 1. Clone this repo.
