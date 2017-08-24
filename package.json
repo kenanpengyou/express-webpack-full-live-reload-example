@@ -29,7 +29,7 @@
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.10.0",
     "node-sass": "^4.5.0",
-    "npm-install-webpack-plugin": "^4.0.4",
+    "npm-install-webpack-plugin": "^4.0.5",
     "reload": "^1.1.1",
     "resolve-url-loader": "^2.0.0",
     "sass-loader": "^6.0.1",
