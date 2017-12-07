@@ -17,26 +17,26 @@
   "license": "MIT",
   "dependencies": {
     "consolidate": "^0.14.5",
-    "ejs": "^2.5.5",
-    "express": "^4.14.0"
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.5",
-    "chokidar": "^1.6.1",
-    "clean-webpack-plugin": "^0.1.14",
-    "cross-env": "^3.1.4",
-    "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^2.0.0-rc.3",
-    "file-loader": "^0.10.0",
-    "node-sass": "^4.5.0",
+    "browser-sync": "^2.18.13",
+    "chokidar": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "cross-env": "^3.2.4",
+    "css-loader": "^0.26.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.10.1",
+    "node-sass": "^4.7.2",
     "npm-install-webpack-plugin": "^4.0.5",
-    "reload": "^1.1.1",
-    "resolve-url-loader": "^2.0.0",
-    "sass-loader": "^6.0.1",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^2.2.1",
-    "webpack-dev-middleware": "^1.10.1",
-    "webpack-hot-middleware": "^2.17.0"
+    "reload": "^1.1.7",
+    "resolve-url-loader": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.7.0",
+    "webpack-dev-middleware": "^1.12.2",
+    "webpack-hot-middleware": "^2.21.0"
   }
 }
