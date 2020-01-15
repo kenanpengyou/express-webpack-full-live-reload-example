@@ -11,16 +11,16 @@ This branch `master` is for webpack 4, use branch `webpack_2` or `webpack_1` if 
 
 2. Install dependencies.
 
-        npm install
-        npm install supervisor -g
+        yarn
+        yarn global add supervisor
 
 3. Try these out.
 
-    * `npm start` to develop with full live reload.
-    * `npm run browsersync` is a alternative for development. It may be faster when modifying the express views
+    * `yarn start` to develop with full live reload.
+    * `yarn browsersync` is a alternative for development. It may be faster when modifying the express views
     (templates) only.
-    * `npm run production` to emit outputs and run the express for production.
-    * `npm run build` if you care about what is hold in memory for development...
+    * `yarn production` to emit outputs and run the express for production.
+    * `yarn build` if you care about what is hold in memory for development...
 
 ## Preview
 
