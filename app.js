@@ -29,10 +29,7 @@ if (isDev) {
 
         // public path should be the same with webpack config
         publicPath: webpackDevConfig.output.publicPath,
-        noInfo: true,
-        stats: {
-            colors: true
-        }
+        stats: 'errors-only'
     }));
     app.use(webpackHotMiddleware(compiler));
 
@@ -43,11 +40,17 @@ if (isDev) {
     var http = require('http');
 
     var server = http.createServer(app);
-    reload(server, app);
 
-    server.listen(port, function(){
-        console.log('App (dev) is now running on port 3000!');
+    reload(app).then(function (reloadReturned) {
+
+        // start web server after reload started
+        server.listen(port, function(){
+            console.log('App (dev) is now running on port 3000!');
+        });
+    }).catch(function (err) {
+        console.error('Reload could not start, could not start server', err);
     });
+
 } else {
 
     // static assets served by express.static() for production

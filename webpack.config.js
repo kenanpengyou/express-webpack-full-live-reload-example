@@ -1,10 +1,10 @@
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
-var publicPath = 'http://localhost:3000/';
-var hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
+const publicPath = 'http://localhost:3000/';
+const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
 
-var devConfig = {
+const devConfig = {
     entry: {
         page1: ['./client/page1', hotMiddlewareScript],
         page2: ['./client/page2', hotMiddlewareScript]
@@ -15,18 +15,35 @@ var devConfig = {
         publicPath: publicPath
     },
     devtool: 'eval-source-map',
+    mode: 'development',
     module: {
         rules: [{
             test: /\.(png|jpg)$/,
-            use: 'url-loader?limit=8192&context=client&name=[path][name].[ext]'
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                    context: 'client',
+                    name: '[path][name].[ext]'
+                }
+            }]
         }, {
             test: /\.scss$/,
-            use: [
-                'style-loader',
-                'css-loader?sourceMap',
-                'resolve-url-loader',
-                'sass-loader?sourceMap'
-            ]
+            use: [{
+                loader: 'style-loader',
+            }, {
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true
+                }
+            }, {
+                loader: 'resolve-url-loader',
+            }, {
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true
+                }
+            }]
         }]
     },
     plugins: [

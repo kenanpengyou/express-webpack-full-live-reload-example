@@ -1,8 +1,8 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-var productionConfig = [{
+const productionConfig = [{
     entry: {
         page1: './client/page1',
         page2: './client/page2'
@@ -12,23 +12,38 @@ var productionConfig = [{
         path: path.resolve(__dirname, './public'),
         publicPath: '/'
     },
+    mode: 'production',
     module: {
         rules: [{
             test: /\.(png|jpg)$/,
-            use: 'url-loader?limit=8192&context=client&name=[path][name].[ext]'
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                    context: 'client',
+                    name: '[path][name].[ext]'
+                }
+            }]
         }, {
             test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
-            })
+            use: [{
+                loader: MiniCssExtractPlugin.loader,
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'resolve-url-loader'
+            }, {
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true
+                }
+            }]
         }]
     },
     plugins: [
-        new CleanWebpackPlugin(['public']),
-        new ExtractTextPlugin({
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
             filename: './[name]/index.css',
-            allChunks: true
         })
     ]
 }];

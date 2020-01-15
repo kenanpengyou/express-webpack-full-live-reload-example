@@ -21,12 +21,15 @@ if (isDev) {
 
     var compiler = webpack(webpackDevConfig);
 
+    // permit request from browsersync server(8080)
+    app.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "http://localhost:8080");
+        next();
+    });
+
     app.use(webpackDevMiddleware(compiler, {
         publicPath: webpackDevConfig.output.publicPath,
-        noInfo: true,
-        stats: {
-            colors: true
-        }
+        stats: 'errors-only'
     }));
     app.use(webpackHotMiddleware(compiler));
 
@@ -38,7 +41,7 @@ if (isDev) {
         bs.init({
             open: false,
             ui: false,
-            notify: false,
+            notify: true,
             proxy: 'localhost:3000',
             files: ['./server/views/**'],
             port: 8080
